@@ -1,0 +1,15 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET     /es/stats        @controllers.ElasticController.getStats()
+POST    /es/index        @controllers.ElasticController.createIndex()
+POST    /es/load         @controllers.ElasticController.loadData()
+GET     /es/airport/:id  @controllers.ElasticController.getAirportById(id: Long)
+GET     /es/airports/by-country-code/:country       @controllers.ElasticController.airportsByCountry(country: String)
+
+GET     /search/airports/by-country/:country       @controllers.SearchController.airportsByCountry(country: String)
+GET     /report/countries/airports-count           @controllers.ReportController.reportCountries
+GET     /report/countries/runways                  @controllers.ReportController.reportCountriesRunways
+GET     /report/runways/identifier                 @controllers.ReportController.reportRunwaysIdent
+GET     /report/airports/all                       @controllers.ReportController.allAirports
