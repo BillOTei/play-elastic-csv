@@ -13,16 +13,16 @@ To use [elasticsearch query api](https://www.elastic.co/guide/en/elasticsearch/r
 - [localhost:9200/lunatech/airport/_search?q=iso_country:US](http://localhost:9200/lunatech/airport/_search?q=iso_country:US) should 
 give you airports from the USA
 
-    ## Routes
-    
-    GET     /es/stats        elasticsearch server probe
-    POST    /es/index        creates the elasticsearch db index
-    POST    /es/load         populates the elastic db with csv data
-    GET     /es/airport/:id  gets an airport by id in elastic search
-    GET     /es/airports/by-country-code/:country      gets an airport by country code in elasticsearch (under development)
-    
-    GET     /search/airports/by-country/:country    gets an airport by country code or country name (fuzzy search as well)
-    GET     /report/countries/airports-count        gets 10 top and low count of airports per country
-    GET     /report/countries/runways               gets runway types per country
-    GET     /report/runways/identifier              gets most used runway identifiers
-    GET     /report/airports/all                    gets all airports data (very heavy)
+## Routes
+
+GET     /es/stats        elasticsearch server probe
+POST    /es/index        creates the elasticsearch db index
+POST    /es/load         populates the elastic db with csv data
+GET     /es/airport/:id  gets an airport by id in elastic search
+GET     /es/airports/by-country-code/:country      gets an airport by country code in elasticsearch (under development)
+
+GET     /search/airports/by-country/:country    gets an airport by country code or country name (fuzzy search as well)
+GET     /report/countries/airports-count        gets 10 top and low count of airports per country
+GET     /report/countries/runways               gets runway types per country
+GET     /report/runways/identifier              gets most used runway identifiers
+GET     /report/airports/all                    gets all airports data (very heavy)
